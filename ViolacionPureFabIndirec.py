@@ -28,3 +28,7 @@ pedido = Pedido(cliente, platos)
 total = pedido.calcular_total()  # ❌ La clase Pedido tiene lógica extra
 
 print(f"Total a pagar: ${total:.2f}")
+
+❌ Se viola Indirection → Cliente habla directamente con Cocinero, lo que hace el código poco flexible.
+    
+❌ Se viola Pure Fabrication → Pedido tiene la lógica de cálculo de cuentas, lo que rompe el SRP (Single Responsibility Principle).
