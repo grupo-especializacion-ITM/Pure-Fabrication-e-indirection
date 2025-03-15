@@ -8,19 +8,27 @@ Creamos un CalculadorDeCuenta para separar la lógica de cálculo del pedido.
 
 
 ¿Qué principios puede violar este diseño?
+
 Principio de Alta Cohesión 🛑
 
 Si agregamos demasiadas capas de indirección o clases de fabricación pura sin necesidad, podemos hacer que el sistema sea difícil de seguir.
+
 Solución: Solo agregar clases intermedias cuando realmente se necesiten.
+
 Principio de Encapsulación 🛑
 
 Si CalculadorDeCuenta accediera directamente a los atributos internos de Pedido, se rompería la encapsulación.
+
 Solución: Usar métodos públicos para acceder a los datos en lugar de acceder directamente a los atributos privados.
+
 Principio de Diseño Basado en el Dominio (DDD) 🛑
 
 CalculadorDeCuenta no es un objeto real en un restaurante, lo que se aleja del modelo del negocio.
 Solución: Justificar su existencia asegurándonos de que realmente ayuda a la organización del código.
+
+
 Conclusión
+
 ✔ Usamos Indirection con Mesero para reducir acoplamiento.
 ✔ Usamos Pure Fabrication con CalculadorDeCuenta para organizar la lógica.
 ✔ Si abusamos de estas técnicas, podemos hacer el código innecesariamente complicado.
